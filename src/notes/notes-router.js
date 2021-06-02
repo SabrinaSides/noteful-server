@@ -72,12 +72,12 @@ notesRouter
         })
     })
     .delete((req, res, next) => {
-        knexInstance = req.app.get('db')
+        //knexInstance = req.app.get('db')
         const { note_id } = req.params
 
         NotesService.deleteNote(knexInstance, note_id)
-            .then(note => {
-                res.status(204).end()
+            .then(() => {
+                res.status(204).end();
             })
         .catch(next)
     })

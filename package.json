@@ -10,8 +10,8 @@
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "deploy": "git push heroku main",
-    "postdeploy": "npm run migrate:production"
+    "predeploy": "npm audit && npm run migrate:production",
+    "deploy": "git push heroku main"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
     "knex": "^0.95.6",
     "morgan": "^1.10.0",
     "pg": "^8.6.0",
-    "postgrator-cli": "^4.0.0",
+    "postgrator-cli": "^3.2.0",
     "xss": "^1.0.9"
   },
   "devDependencies": {

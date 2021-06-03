@@ -13,6 +13,9 @@
     "predeploy": "npm audit && npm run migrate:production",
     "deploy": "git push heroku main"
   },
+  "engines": {
+    "node": "10.11.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

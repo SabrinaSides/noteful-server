@@ -1,3 +1,4 @@
+require('dotenv').config()
 const knex= require('knex')
 const app = require('./app')
 const { PORT, DATABASE_URL } = require('./config')
@@ -6,9 +7,8 @@ const { PORT, DATABASE_URL } = require('./config')
 const db = knex({
   client: 'pg',
   connection: {
-    connectionString: DATABASE_URL,
-    ssl: true,
-    ssl: { rejectUnauthorized: false }
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized }
   }
 })
 

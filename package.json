@@ -9,8 +9,10 @@
     "dev": "nodemon src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku main",
+    "postdeploy": "npm run migrate:production",
     "migrate": "postgrator --config postgrator-config.js",
-    "migrate:test": "env NODE_ENV=test npm run migrate"
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "migrate:production": "heroku run npm run migrate"
   },
   "keywords": [],
   "author": "",
@@ -23,13 +25,13 @@
     "knex": "^0.95.6",
     "morgan": "^1.10.0",
     "pg": "^8.6.0",
+    "postgrator-cli": "^3.2.0",
     "xss": "^1.0.9"
   },
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^8.4.0",
     "nodemon": "^2.0.7",
-    "postgrator-cli": "^3.2.0",
     "supertest": "^6.1.3"
   }
 }

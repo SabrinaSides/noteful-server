@@ -8,7 +8,7 @@ const db = knex({
   connection: {
     connectionString: DATABASE_URL,
     ssl: true,
-    ssl: { rejectUnauthorized }
+    ssl: { rejectUnauthorized: false }
   }
 })
 

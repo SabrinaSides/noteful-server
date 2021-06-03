@@ -7,7 +7,10 @@ const db = knex({
   client: 'pg',
   connection: {
     connectionString: DATABASE_URL,
-    ssl: true }
+    ssl: true,
+    dialectOptions: {
+      ssl: true
+    } }
 })
 
 app.set('db', db)

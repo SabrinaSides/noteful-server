@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
-    "migratonDirectory": "migrations", //refers to folder that contains migration steps
+    "migrationDirectory": "migrations", //refers to folder that contains migration steps
     "driver": "pg",
     //setup config so we can migrate to test db when testing and normal db when not running tests
     "connectionString": (process.env.NODE_ENV === 'test') ? process.env.TEST_DATABASE_URL : process.env.DATABASE_URL

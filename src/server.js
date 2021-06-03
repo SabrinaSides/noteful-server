@@ -5,12 +5,7 @@ const { PORT, DATABASE_URL } = require('./config')
 //connect to db using knex
 const db = knex({
   client: 'pg',
-  connection: DATABASE_URL,
-  ssl: true,
-  dialectOptions: {
-    ssl: { require: true },
-  },
-  logging: false,
+  connection: DATABASE_URL
 })
 
 app.set('db', db)

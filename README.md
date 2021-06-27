@@ -1,26 +1,19 @@
-# Express Boilerplate!
+# Noteful
 
-This is a boilerplate project used for starting new projects!
+## Summary
 
-## Set up
+Created in coordination with my Thinkful curriculum, this full-stack app allows users to create and organize notes.
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+The Noteful API utilizes GET, POST and DELETE endpoints along with the corresponding postgreSQL databases. The app's client-side was also written by me (as guided by the Thinkful curriculum) [here](https://github.com/SabrinaSides/noteful-client).
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## See the App Live
 
-## Scripts
+[Check It Out Here](https://noteful-client-lac-zeta.vercel.app/)
 
-Start the application `npm start`
+## Tech Stack
 
-Start nodemon for the application `npm run dev`
+**Client:** React, Vanilla CSS
 
-Run the tests `npm test`
+**Server:** Node, Express, PostgreSQL
 
-## Deploying
-
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.
+[View the Client Repo](https://github.com/SabrinaSides/noteful-client)
